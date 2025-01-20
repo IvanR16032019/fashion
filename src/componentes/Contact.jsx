@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import img1 from '../imagenes/Contact/Img1.jpg'
+import img1 from '../imagenes/Contact/img1.jpg'
 import img2 from '../imagenes/Contact/img2.jpg'
 import "../hojas-estilo-estilos/Contact.css";
 
