@@ -9,6 +9,7 @@
   font-family: 'Arial', sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
+  z-index: 10;
 }
 
 /* Contenedor principal */
@@ -23,7 +24,7 @@
 .navbar-menu {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   margin: 0;
   padding: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -44,6 +45,7 @@
   color: white;
   font-size: 1rem;
   transition: color 0.3s ease;
+  padding: 0.3rem 0.5rem;
 }
 
 .navbar-link:hover {
@@ -71,7 +73,7 @@
 }
 
 .lang-button {
-  padding: 0.3rem 0.8rem;
+  padding: 0.2rem 0.6rem;
   font-size: 0.9rem;
   color: white;
   background-color: #007bff;
@@ -102,16 +104,32 @@
     left: 0;
     width: 100%;
     background-color: rgb(191, 21, 126);
-    padding: 1rem;
+    padding: 0.5rem 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
+    z-index: 9;
   }
 
   .navbar-menu.show {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+  }
+
+  .navbar-item {
+    text-align: center;
+    margin: 0.3rem 0;
+  }
+
+  .navbar-link {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .navbar-lang-buttons {
+    justify-content: center;
+    margin-top: 0.5rem;
   }
 }
