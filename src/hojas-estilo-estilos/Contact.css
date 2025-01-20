@@ -1,0 +1,136 @@
+/* Estilos para la página de contacto */
+.contact-container {
+    padding: 3rem 1.5rem;
+    background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+    text-align: center;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  /* Título */
+  .contact-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .contact-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: #ff6f61;
+    margin: 1rem auto 0;
+    border-radius: 4px;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  /* Descripción */
+  .contact-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  /* Información de contacto */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .contact-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .contact-item p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  /* Imágenes de contacto */
+  .contact-images {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .contact-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100px;
+    }
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .contact-info {
+      align-items: center;
+    }
+  
+    .contact-item h3 {
+      font-size: 1.3rem;
+    }
+  
+    .contact-item p {
+      font-size: 1rem;
+    }
+  
+    .contact-images {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-image {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  

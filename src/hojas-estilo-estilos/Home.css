@@ -1,0 +1,216 @@
+/* General Styles */
+.home-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 0 15px;
+  background-color: #f7f7f7;
+}
+
+.hero-section {
+  background-color: #fce4ec; /* Rosa pastel suave */
+  padding: 70px 20px; /* Reduce el padding horizontal para pantallas pequeñas */
+  text-align: center;
+  margin: 20px auto; /* Centrado horizontal */
+  max-width: 1200px; /* Ancho máximo para evitar que se estire demasiado */
+  margin-bottom: 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Agrega bordes redondeados para un diseño más moderno */
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #dc467d; /* Rosa fuerte */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px; /* Espaciado entre el título y el texto */
+}
+
+.hero-section .intro-text {
+  font-size: 1.3rem;
+  color: #f06292; /* Rosado suave (el color correcto para el texto) */
+  margin-top: 20px;
+  line-height: 1.5; /* Mejora la legibilidad */
+}
+
+/* Consultas de medios */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding: 50px 15px; /* Reduce el padding general */
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem; /* Ajusta el tamaño del título */
+  }
+
+  .hero-section .intro-text {
+    font-size: 1.1rem; /* Ajusta el tamaño del texto */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-section {
+    padding: 30px 10px; /* Reduce aún más el padding */
+  }
+
+  .hero-section h1 {
+    font-size: 2rem; /* Reduce el tamaño del título */
+  }
+
+  .hero-section .intro-text {
+    font-size: 1rem; /* Reduce el tamaño del texto */
+  }
+}
+
+.products-highlight,
+.about-us,
+.testimonials {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.products-highlight h2,
+.about-us h2,
+.testimonials h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #981545; /* Rosa fuerte */
+  margin-bottom: 30px;
+}
+
+.products-highlight .products-description,
+.about-us .about-us-description,
+.testimonials .testimonial-text {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-top: 20px;
+}
+
+.testimonials p {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #f39c12; /* Naranja cálido */
+}
+
+/* Image Gallery */
+.image-gallery {
+  margin-bottom: 60px;
+  padding: 40px 0;
+}
+
+.image-gallery h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #d81b60; /* Rosa fuerte */
+  margin-bottom: 40px;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos imágenes por fila */
+  gap: 30px;
+  justify-items: center;
+  padding: 0 15px;
+}
+
+.image-item {
+  background-color: #ffffff; /* Blanco */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease, transform 0.4s ease-in-out;
+  box-sizing: border-box;
+  transition-delay: 0.2s; /* Retraso para que las imágenes se muestren una a una */
+}
+
+.image-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-item img:hover {
+  transform: scale(1.05);
+}
+
+.image-item h3 {
+  font-size: 1.8rem;
+  color: #8e44ad; /* Morado suave */
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.image-item p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-top: 10px;
+}
+
+/* About Us and Testimonials */
+.about-us,
+.testimonials {
+  background-color: #fce4ec; /* Rosa pastel suave */
+  padding: 50px 0;
+}
+
+.testimonials p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #f39c12; /* Naranja cálido */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero-section h1 {
+      font-size: 2.5rem;
+  }
+
+  .image-container {
+      grid-template-columns: repeat(1, 1fr); /* Una imagen por fila */
+  }
+
+  .image-item {
+      padding: 15px;
+  }
+
+  .products-highlight h2,
+  .about-us h2,
+  .testimonials h2 {
+      font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-section h1 {
+      font-size: 2rem;
+  }
+
+  .image-container {
+      grid-template-columns: 1fr; /* Una imagen por fila */
+  }
+
+  .image-item {
+      padding: 10px;
+  }
+
+  .products-highlight h2,
+  .about-us h2,
+  .testimonials h2 {
+      font-size: 1.8rem;
+  }
+}
