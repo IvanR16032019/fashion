@@ -8,9 +8,9 @@ const Contact = () => {
   const { t } = useTranslation();
 
   // Datos de contacto
-  const phone = "+1 234 567 890";
+  const phone = "+1 XXX XXX XXXX";
   const email = "contacto@fashion-skin.com";
-  const location = "Avenida Principal, 123, Ciudad Imaginaria, País Ejemplo";
+  const location = "1111 xxx AVE, XXX, XX, 12345";
 
   return (
     <div className="contact-container">
